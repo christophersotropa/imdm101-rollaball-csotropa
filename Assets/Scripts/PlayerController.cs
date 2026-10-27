@@ -10,11 +10,13 @@ public class PlayerController : MonoBehaviour
     private int count;
     private float movementX;
     private float movementY;
+    public GameObject winTextObject;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         rb = GetComponent <Rigidbody>(); 
         count = 0;
+        winTextObject.SetActive(false);
         SetCountText();
     }
 
@@ -45,5 +47,9 @@ public class PlayerController : MonoBehaviour
     void SetCountText() 
     {
        countText.text =  "Count: " + count.ToString();
+       if (count >= 12)
+       {
+           winTextObject.SetActive(true);
+       }
     }
 }

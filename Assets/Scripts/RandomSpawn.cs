@@ -3,7 +3,7 @@ using UnityEngine;
 public class RandomSpawn : MonoBehaviour
 {
     public GameObject PickUp;
-    public int count = 10;
+    public int count = 12;
 
     public Vector3 minBounds = new Vector3(-25f, 0.588f, 25f);
     public Vector3 maxBounds = new Vector3(25f, 0.588f, -25f);
